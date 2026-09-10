@@ -1,0 +1,10 @@
+{
+  "architect":         { "model": "custom:<providerId>:gpt-6-astra",  "thoughtLevel": "xhigh" },
+  "builder":           { "model": "custom:<providerId>:gpt-6-astra",  "thoughtLevel": "xhigh" },
+  "expert":            { "model": "custom:<providerId>:gpt-6-astra",  "thoughtLevel": "xhigh" },
+  "reviewer-fallback": { "model": "custom:<providerId>:gpt-6-astra",  "thoughtLevel": "xhigh" },
+  "verifier":          { "model": "custom:<providerId>:gpt-5.6-luna", "thoughtLevel": "max" },
+  "reviewer":          { "model": "custom:<providerId>:k3",           "thoughtLevel": "max" },
+  "Explore":           { "model": "custom:<providerId>:gpt-5.6-luna", "thoughtLevel": "max" },
+  "general-purpose":   { "model": "custom:<providerId>:gpt-5.6-luna", "thoughtLevel": "max" }
+}

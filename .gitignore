@@ -1,0 +1,19 @@
+# 环境与本地文件
+.env
+.env.*
+*.local
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 绝不提交：凭据、本地配置、备份、个人数据
+credentials.json
+*credential*
+*secret*
+*token*
+*.key
+*.pem
+backups/
+routes.json
