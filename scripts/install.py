@@ -374,6 +374,10 @@ def cmd_list_models(zcode_home: Path) -> int:
         for model_id in sorted(by_provider[label]):
             provider_id = label.rsplit("(", 1)[1].rstrip(")")
             print(f"  custom:{provider_id}:{model_id}")
+    print(
+        "\n注意：上面的 provider ID 是本机生成的 UUID，换一台电脑就不同。"
+        "它需要写进 --routes 的 model 字段，但属于本机标识，不要贴到公开的 issue 或文档里。"
+    )
     return 0
 
 
