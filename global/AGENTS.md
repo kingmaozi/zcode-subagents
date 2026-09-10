@@ -36,6 +36,13 @@ This is the stable instruction prefix ZCode loads for every workspace. Keep it s
 - Aim for real total cost and finished quality. Do not pad context to chase cache hits, send requests that cannot help, or keep stale context alive.
 - For long tasks, record completed work, key decisions, and open questions in a project file so work resumes without re-investigation.
 
+## Tool fallbacks
+
+- Some tools have fixed budgets you cannot raise per call. In particular, WebFetch answers the prompt using a small fast model inside a 60-second budget, so a very large page will time out no matter how the call is written. For a big documentation page, download it and read the file locally instead.
+- When a fetch or read channel fails, switch channels instead of retrying the same call: a search endpoint that returns passages, a local download, or an alternate reader. Repeating an identical call spends the same budget to fail the same way.
+- Treat a tool failure as information about that channel, not as evidence about the target. State which channel you used and what it therefore did not verify.
+- A failure caused by missing authorization or an unreachable endpoint is a configuration fact. Report it; do not disguise it as a content problem or keep retrying.
+
 ## Implementation and verification
 
 - Scale verification to the risk of the change. Reuse verification that already covers the same code state; do not mechanically re-run the full suite.

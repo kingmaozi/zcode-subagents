@@ -157,6 +157,14 @@ python3 scripts/install.py --global-instructions --apply
 
 来源：OpenAI 官方文档（`developers.openai.com`）的 GPT-6 Astra 模型指南与提示工程指南。模型本身的推理档位支持 `low`、`medium`、`high`、`xhigh`、`max`。
 
+## 关于只读角色的 MCP 检索工具
+
+`architect`、`reviewer`、`reviewer-fallback` 的 `tools` 白名单里包含四个 `mcp__codegraph__*` 条目。
+
+它们是**可选的**：只在你本机配置了 `codegraph` 这个 MCP server 时才可用。没有配置时这些名字匹配不到任何工具，会被静默忽略，**不会导致角色加载失败或报错**。
+
+如果不需要，直接从对应角色的 `tools` 列表里删掉这四行即可。安装器不会因为缺少 codegraph 而拒绝安装。
+
 ## 已知限制
 
 - **不是热加载**：改完角色文件必须新建会话或重启，否则当前会话看不到新角色。

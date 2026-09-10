@@ -73,6 +73,10 @@ Standard library only. The default is always a dry run.
 
 `global/AGENTS.md` is tuned for GPT-6 Astra's documented tendencies — over-asking, sensitivity to conflicting instruction files, under-delegation, verbose formatting, and over-testing small changes. It deliberately contains **no subagent role table**, because ZCode injects each role's instructions at runtime and restating them risks contradictions.
 
+## 可选依赖 / Optional dependency
+
+只读角色的工具白名单里带有四个 `mcp__codegraph__*` 检索工具。它们只在本机配置了 `codegraph` MCP server 时生效；未配置时会被静默忽略，不影响角色加载。详见 [`docs/INSTALL.md`](docs/INSTALL.md)。
+
 ## 目录结构 / Layout
 
 ```

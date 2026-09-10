@@ -13,6 +13,10 @@ tools:
   - WebSearch
   - TodoWrite
   - NotebookRead
+  - mcp__codegraph__codegraph_explore
+  - mcp__codegraph__codegraph_node
+  - mcp__codegraph__codegraph_search
+  - mcp__codegraph__codegraph_callers
 injectAgentsMd: true
 ---
 
